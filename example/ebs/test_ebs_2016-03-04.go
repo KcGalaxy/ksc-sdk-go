@@ -3,13 +3,13 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/KscSDK/ksc-sdk-go/ksc"
-	"github.com/KscSDK/ksc-sdk-go/ksc/utils"
-	"github.com/KscSDK/ksc-sdk-go/service/ebs"
+	"github.com/KcGalaxy/ksc-sdk-go/ksc"
+	"github.com/KcGalaxy/ksc-sdk-go/ksc/utils"
+	"github.com/KcGalaxy/ksc-sdk-go/service/ebs"
 )
 
-func main()  {
-    ak := "你的AK"
+func main() {
+	ak := "你的AK"
 	sk := "你的SK"
 	region := "cn-beijing-6"
 	//debug模式的话 打开这个开关
@@ -19,7 +19,7 @@ func main()  {
 	var resp *map[string]interface{}
 	var err error
 
-    //	****************************************查询云盘(DescribeVolumes())***************************************************
+	//	****************************************查询云盘(DescribeVolumes())***************************************************
 	/*describeVolumes := make(map[string]interface{})
 	describeVolumes["VolumeType"] = "SSD3.0"//SSD2.0/SSD3.0/SATA2.0/EHDD
 	describeVolumes["VolumeCategory"] = "data"//data/system

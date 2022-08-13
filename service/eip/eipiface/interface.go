@@ -9,7 +9,7 @@
 package eipiface
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/service/eip"
+	"github.com/KcGalaxy/ksc-sdk-go/service/eip"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 )

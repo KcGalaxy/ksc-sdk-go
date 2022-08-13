@@ -3,9 +3,9 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/KscSDK/ksc-sdk-go/ksc"
-	"github.com/KscSDK/ksc-sdk-go/ksc/utils"
-	"github.com/KscSDK/ksc-sdk-go/service/monitor"
+	"github.com/KcGalaxy/ksc-sdk-go/ksc"
+	"github.com/KcGalaxy/ksc-sdk-go/ksc/utils"
+	"github.com/KcGalaxy/ksc-sdk-go/service/monitor"
 )
 
 func main() {

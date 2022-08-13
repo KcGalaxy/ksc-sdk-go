@@ -9,7 +9,7 @@
 package stsiface
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/service/sts"
+	"github.com/KcGalaxy/ksc-sdk-go/service/sts"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 )

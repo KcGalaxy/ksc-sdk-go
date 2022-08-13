@@ -9,17 +9,17 @@ import (
 )
 
 type xmlErrorResponse struct {
-	Error Error `json:"Error"`
-	RequestID string   `json:"RequestID"`
+	Error     Error  `json:"Error"`
+	RequestID string `json:"RequestID"`
 }
 
 type Error struct {
-	Code string `json:"Code"`
+	Code    string `json:"Code"`
 	Message string `json:"Message"`
 }
 
 // UnmarshalErrorHandler is a name request handler to unmarshal request errors
-var UnmarshalErrorHandler = request.NamedHandler{Name: "kscsdk.query.UnmarshalError", Fn: UnmarshalError}
+var UnmarshalErrorHandler = request.NamedHandler{Name: "KcGalaxy.query.UnmarshalError", Fn: UnmarshalError}
 
 // UnmarshalError unmarshals an error response for an AWS Query service.
 func UnmarshalError(r *request.Request) {
@@ -31,7 +31,7 @@ func UnmarshalError(r *request.Request) {
 			fmt.Printf("read body err, %v\n", err)
 			return
 		}
-		if err = json.Unmarshal(body,&resp); err != nil {
+		if err = json.Unmarshal(body, &resp); err != nil {
 			fmt.Printf("Unmarshal err, %v\n", err)
 			return
 		}
@@ -41,7 +41,7 @@ func UnmarshalError(r *request.Request) {
 			resp.RequestID,
 		)
 		return
-	}else {
+	} else {
 		r.Error = awserr.NewRequestFailure(
 			awserr.New("ServiceUnavailableException", "service is unavailable", nil),
 			r.HTTPResponse.StatusCode,

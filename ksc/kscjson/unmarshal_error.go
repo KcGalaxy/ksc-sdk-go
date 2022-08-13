@@ -1,8 +1,8 @@
 package kscjson
 
 import (
+	"github.com/KcGalaxy/ksc-sdk-go/ksc/kscquery"
 	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/KscSDK/ksc-sdk-go/ksc/kscquery"
 )
 
 type xmlErrorResponse struct {
@@ -16,7 +16,7 @@ type Error struct {
 }
 
 // UnmarshalErrorHandler is a name request handler to unmarshal request errors
-var UnmarshalErrorHandler = request.NamedHandler{Name: "kscsdk.query.UnmarshalError", Fn: UnmarshalError}
+var UnmarshalErrorHandler = request.NamedHandler{Name: "KcGalaxy.query.UnmarshalError", Fn: UnmarshalError}
 
 // UnmarshalError unmarshals an error response for an AWS Query service.
 func UnmarshalError(r *request.Request) {

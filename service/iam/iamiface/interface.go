@@ -9,7 +9,7 @@
 package iamiface
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/service/iam"
+	"github.com/KcGalaxy/ksc-sdk-go/service/iam"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 )

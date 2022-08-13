@@ -8,10 +8,10 @@ import (
 )
 
 // UnmarshalHandler is a named request handler for unmarshaling query protocol requests
-var UnmarshalHandler = request.NamedHandler{Name: "kscsdk.query.Unmarshal", Fn: Unmarshal}
+var UnmarshalHandler = request.NamedHandler{Name: "KcGalaxy.query.Unmarshal", Fn: Unmarshal}
 
 // UnmarshalMetaHandler is a named request handler for unmarshaling query protocol request metadata
-var UnmarshalMetaHandler = request.NamedHandler{Name: "kscsdk.query.UnmarshalMeta", Fn: UnmarshalMeta}
+var UnmarshalMetaHandler = request.NamedHandler{Name: "KcGalaxy.query.UnmarshalMeta", Fn: UnmarshalMeta}
 
 // Unmarshal unmarshals a response for an AWS Query service.
 func Unmarshal(r *request.Request) {

@@ -4,45 +4,44 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/KscSDK/ksc-sdk-go/ksc"
-	"github.com/KscSDK/ksc-sdk-go/ksc/utils"
-	"github.com/KscSDK/ksc-sdk-go/service/kec"
+	"github.com/KcGalaxy/ksc-sdk-go/ksc"
+	"github.com/KcGalaxy/ksc-sdk-go/ksc/utils"
+	"github.com/KcGalaxy/ksc-sdk-go/service/kec"
 )
 
 func main() {
-	ak := "你的ak"
-	sk := "你的sk"
-	region := "cn-beijing-6"
+	ak := "AKLTKnBCVgZsQwOn9vJ4n_Qm1g"
+	sk := "OEeCCH0N+XSRyIn+I5MEa+Kou92ie6r2LGe10sIxCeB0F6qXuEsbWUGg9QJXHIIyUg=="
+	region := "cn-shanghai-2"
 	//debug模式的话 打开这个开关
 	svc := kec.SdkNew(ksc.NewClient(ak, sk /*,true*/), &ksc.Config{Region: &region}, &utils.UrlInfo{
-		UseSSL: true,
+		UseSSL: false,
+		Domain: "yunyan.com",
 	})
 	var resp *map[string]interface{}
 	var err error
 
 	//	****************************************创建实例(RunInstances())***************************************************
 
-	/*runInstances := make(map[string]interface{})
-	runInstances["ImageId"] = "b2e78146-58f1-4298-9397-ebf942246a2b"
-	runInstances["InstanceType"] = "N2.1A"
-	runInstances["DataDiskGb"] = "50"
+	runInstances := make(map[string]interface{})
+	runInstances["ImageId"] = "98f8d55e-04c0-11ec-96a7-0894ef7c846c"
+	runInstances["InstanceType"] = "S3.1A"
+	//runInstances["DataDiskGb"] = "50"
 	runInstances["MaxCount"] = "1"
 	runInstances["MinCount"] = "1"
-	runInstances["SubnetId"] = "9fd83a5e-33cf-4196-b8df-59fc57478488"
-	runInstances["InstancePassword"] = "Qwer@1234"
+	runInstances["SubnetId"] = "a36077b3-1dc9-446b-b524-aa7935cbeeee"
+	runInstances["InstancePassword"] = "Kingsoft123"
 	runInstances["ChargeType"] = "Daily"
 	runInstances["PurchaseTime"] = "1"
-	runInstances["SecurityGroupId"] = "31a5484d-8077-4aca-8f79-e093f9d4bbc1"
-	runInstances["InstanceName"] = "sdk-test-ebs"
+	runInstances["SecurityGroupId"] = "5a96c5e6-f3f7-4bea-af46-0d1233e48d64"
+	runInstances["InstanceName"] = "sdk-test1"
 	runInstances["InstanceNameSuffix"] = "1"
 	runInstances["SriovNetSupport"] = "false"
-	runInstances["ProjectId"] = "208"
-	runInstances["MaxCount"] = "1"
-	runInstances["MaxCount"] = "1"
+	runInstances["ProjectId"] = "0"
 
-	runInstances["DataDisk.1.Type"] = "SSD3.0"
-	runInstances["DataDisk.1.Size"] = "10"
-	runInstances["DataDisk.1.DeleteWithInstance"] = "true"
+	//runInstances["DataDisk.1.Type"] = "SSD3.0"
+	//runInstances["DataDisk.1.Size"] = "10"
+	//runInstances["DataDisk.1.DeleteWithInstance"] = "true"
 
 	resp, err = svc.RunInstances(&runInstances)
 	if err != nil {
@@ -51,7 +50,7 @@ func main() {
 	if resp != nil {
 		str, _ := json.Marshal(&resp)
 		fmt.Printf("%+v\n", string(str))
-	}*/
+	}
 
 	//	****************************************关闭实例(StopInstances())***************************************************
 

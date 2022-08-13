@@ -9,7 +9,7 @@
 package ebsiface
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/service/ebs"
+	"github.com/KcGalaxy/ksc-sdk-go/service/ebs"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 )

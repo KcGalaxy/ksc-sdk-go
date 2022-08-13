@@ -9,7 +9,7 @@
 package epciface
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/service/epc"
+	"github.com/KcGalaxy/ksc-sdk-go/service/epc"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 )

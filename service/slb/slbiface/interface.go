@@ -9,7 +9,7 @@
 package slbiface
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/service/slb"
+	"github.com/KcGalaxy/ksc-sdk-go/service/slb"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 )

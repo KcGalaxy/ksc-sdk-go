@@ -1,7 +1,7 @@
 package kscquery
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/ksc/kscbody"
+	"github.com/KcGalaxy/ksc-sdk-go/ksc/kscbody"
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/private/protocol/query/queryutil"
@@ -11,7 +11,7 @@ import (
 )
 
 // BuildHandler is a named request handler for building query protocol requests
-var BuildHandler = request.NamedHandler{Name: "kscsdk.query.Build", Fn: Build}
+var BuildHandler = request.NamedHandler{Name: "KcGalaxy.query.Build", Fn: Build}
 
 // Build builds a request for an AWS Query service.
 func Build(r *request.Request) {

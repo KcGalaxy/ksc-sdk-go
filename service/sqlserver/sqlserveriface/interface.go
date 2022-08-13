@@ -9,7 +9,7 @@
 package sqlserveriface
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/service/sqlserver"
+	"github.com/KcGalaxy/ksc-sdk-go/service/sqlserver"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 )

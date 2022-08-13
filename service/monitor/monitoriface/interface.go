@@ -9,7 +9,7 @@
 package monitoriface
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/service/monitor"
+	"github.com/KcGalaxy/ksc-sdk-go/service/monitor"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 )

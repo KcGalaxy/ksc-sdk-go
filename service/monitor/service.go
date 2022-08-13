@@ -3,9 +3,9 @@
 package monitor
 
 import (
-	"github.com/KscSDK/ksc-sdk-go/ksc"
-	"github.com/KscSDK/ksc-sdk-go/ksc/kscjson"
-	"github.com/KscSDK/ksc-sdk-go/ksc/utils"
+	"github.com/KcGalaxy/ksc-sdk-go/ksc"
+	"github.com/KcGalaxy/ksc-sdk-go/ksc/kscjson"
+	"github.com/KcGalaxy/ksc-sdk-go/ksc/utils"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/client"
 	"github.com/aws/aws-sdk-go/aws/client/metadata"
@@ -86,7 +86,9 @@ func SdkNew(p client.ConfigProvider, cfgs *ksc.Config, info ...*utils.UrlInfo) *
 		if info[0].UseInternal {
 			_info.UseInternal = info[0].UseInternal
 		}
-
+		if info[0].Domain != "" {
+			_info.Domain = info[0].Domain
+		}
 	}
 	return ExtraNew(&_info, p, &aws.Config{Region: cfgs.Region})
 }
